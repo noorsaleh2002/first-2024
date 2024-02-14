@@ -1,0 +1,15 @@
+C:\Users\ASUS\Desktop\noor3\noor3\bin\Debug\net6.0\noor3.exe
+C:\Users\ASUS\Desktop\noor3\noor3\bin\Debug\net6.0\noor3.deps.json
+C:\Users\ASUS\Desktop\noor3\noor3\bin\Debug\net6.0\noor3.runtimeconfig.json
+C:\Users\ASUS\Desktop\noor3\noor3\bin\Debug\net6.0\noor3.dll
+C:\Users\ASUS\Desktop\noor3\noor3\bin\Debug\net6.0\noor3.pdb
+C:\Users\ASUS\Desktop\noor3\noor3\obj\Debug\net6.0\noor3.csproj.AssemblyReference.cache
+C:\Users\ASUS\Desktop\noor3\noor3\obj\Debug\net6.0\noor3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\Desktop\noor3\noor3\obj\Debug\net6.0\noor3.AssemblyInfoInputs.cache
+C:\Users\ASUS\Desktop\noor3\noor3\obj\Debug\net6.0\noor3.AssemblyInfo.cs
+C:\Users\ASUS\Desktop\noor3\noor3\obj\Debug\net6.0\noor3.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\noor3\noor3\obj\Debug\net6.0\noor3.dll
+C:\Users\ASUS\Desktop\noor3\noor3\obj\Debug\net6.0\refint\noor3.dll
+C:\Users\ASUS\Desktop\noor3\noor3\obj\Debug\net6.0\noor3.pdb
+C:\Users\ASUS\Desktop\noor3\noor3\obj\Debug\net6.0\noor3.genruntimeconfig.cache
+C:\Users\ASUS\Desktop\noor3\noor3\obj\Debug\net6.0\ref\noor3.dll

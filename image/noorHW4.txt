@@ -1,0 +1,67 @@
+im=input('Enter image file name: ');
+A=imread(im);
+filename=im;
+filename=strcat('zip',filename);
+filename=strtok(filename,'.');
+filename=strcat(filename,'.txt');
+
+s=size(A);
+
+vecA=reshape(A',[1 s(1)*s(2)]);
+
+counter=0;
+maxnum=2^12;
+dictionary=containers.Map;
+index=256;
+
+%creating first dictionary
+for i=0:255
+  dictionary(num2str(i))=i;
+end
+currentpic=num2str(vecA(1));
+x=2;
+f=fopen(filename,'w');
+while x<=length(vecA)+1
+    if ~isKey(dictionary,currentpic)
+
+         %clear dict if full
+           if index==maxnum
+              clear dictionary
+              dictionary=containers.Map;
+              for i=0:255
+              dictionary(num2str(i))=i;
+              end
+              index=256;
+              dictionary(last)=index;
+              index=index+1;
+              
+           end
+        %adding new index
+         dictionary(currentpic)=index;
+        
+          sym=last;
+         fprintf(f,num2str(dictionary(sym)));
+         counter=counter+1;
+         currentpic=now;
+        index=index+1;
+        fprintf(f,'   ');
+    else
+
+   if x==length(vecA)+1
+     break
+   end
+   last=currentpic;
+   currentpic=strcat(currentpic,'-');
+   currentpic=strcat(currentpic,num2str(vecA(x)));
+   now=num2str(vecA(x));
+   x=x+1;
+
+   end
+end
+fprintf(f,num2str(vecA(end)));
+counter=counter+1;
+fclose('all');
+
+
+CR=(length(vecA)*8)/(12*counter);
+disp(['Compression ratio: ', num2str(CR)]);

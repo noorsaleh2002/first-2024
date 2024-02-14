@@ -1,0 +1,73 @@
+float temp;
+float celcius;
+unsigned int duty;
+void servo_0()
+{
+unsigned int i;
+for(i=0;i<50;i++)
+{
+portb.f0=1;
+delay_us(800);
+portb.f0=0;
+delay_us(19200);
+}
+}
+void servo_90()
+{
+unsigned int i;
+for(i=0;i<50;i++)
+{
+portb.f0=1;
+delay_us(1500);
+portb.f0=0;
+delay_us(18500);
+}
+}
+void servo_180()
+{
+unsigned int i;
+for(i=0;i<50;i++)
+{
+portb.f0=1;
+delay_us(2200);
+portb.f0=0;
+delay_us(17800);
+}
+}
+void main() {
+TRISC=0X00;
+TRISB=0X00;
+TRISA=0XFF;
+ADC_Init();
+delay_ms(500);
+PWM1_Init(5000);
+delay_ms(500);
+duty=0;
+
+do{
+duty=duty+5;
+pwm1_start();
+delay_ms(50);
+pwm1_set_duty(duty);
+delay_ms(10);
+}while(duty<255) ;
+
+while(1)
+{
+temp=ADC_Read(0);
+delay_ms(50);
+celcius=((temp*500)/1023);
+
+if(celcius<24)
+servo_0();
+if(celcius>24 && celcius<26)
+servo_90();
+if(celcius>26)
+servo_180();
+
+
+
+}
+
+}
+
